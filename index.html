@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITE 101</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<button onclick="randomNumber()">Click for a Random Number Between 0 and 10</button>
+
+<h1 id="number"></h1>
+
+<img class="img" src="">
+
+<script>
+
+let photos = ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg","photo7.jpg","photo8.jpg","photo9.jpg","photo10.jpg"]
+let number = document.getElementById("number");
+let img = document.querySelector("img");
+
+number.innerHTML = "İndex No: 0" ;
+img.src = "images/photo1.jpg";
+
+function randomNumber() {
+
+let randomNumber = Math.floor(Math.random() * 10 );
+number.innerHTML = "Index No: " + randomNumber;
+img.src = "images/" + photos[randomNumber];
+
+}
+
+
+</script>
+</body>
+</html>
